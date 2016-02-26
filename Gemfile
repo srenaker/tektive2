@@ -14,7 +14,6 @@ gem 'mongoid'
 gem 'bson'
 gem 'bson_ext'
 gem 'slim'
-gem 'sprockets'
 
 group :development, :test do
   gem 'byebug'
