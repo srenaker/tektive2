@@ -1,0 +1,36 @@
+- javascript_include_tag "https://ajax.googleapis.com/ajax/libs/jquery/1.3.1/jquery.min.js"
+- stylesheet_link_tag "jquery.mCustomScrollbar"
+- javascript_include_tag "jquery.mCustomScrollbar.concat"
+
+javascript: 
+    (function($){
+        $(window).load(function(){
+			console.log("starting");
+            $(".residential-list").mCustomScrollbar();
+        });
+    })(jQuery);
+
+div class='section-container'
+	div class='left-side'
+		div class='section-header top-nav-residential'
+			= render 'shared/section_top_nav'
+
+
+		div class='residential-list mCustomScrollbar' data-mcs-theme="rounded-dots"
+	
+			ul
+				- @project_list.each do |project|
+					li 
+						= link_to project.title, "/projects/#{project.id}"
+					
+
+	div class='image-container'
+		div class='main-image'
+			= image_tag "residential/#{@project.id}/#{@current_image}"
+		div class='thumbnails'
+			ul
+				- @thumbnail_count.times do |i|
+					- thumb = "#{i+1}.jpg"
+					- thumb == @current_image ? li_class = "selected-thumbnail" : li_class = 'none'
+					li
+						= link_to image_tag("residential/#{@project.id}/thumbnails/#{thumb}", class: li_class), "/projects/#{@project.id}?image_number=#{i+1}"
