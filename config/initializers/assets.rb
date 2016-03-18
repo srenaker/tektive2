@@ -10,9 +10,10 @@ Rails.application.config.assets.version = '1.0'
 # application.js, application.css, and all non-JS/CSS in app/assets folder are already added.
 # Rails.application.config.assets.precompile += %w( search.js )
 
-Rails.application.config.assets.precompile += %w( 1-rear.jpg )
-Rails.application.config.assets.precompile += %w( jquery.mCustomScrollbar.concat.min.js )
+# Rails.application.config.assets.precompile += %w( 1-rear.jpg )
+# Rails.application.config.assets.precompile += %w( jquery.mCustomScrollbar.concat.min.js )
+#
+#
+# Rails.application.config.assets.precompile += %w( jquery.mCustomScrollbar.min.css )
 
-
-Rails.application.config.assets.precompile += %w( jquery.mCustomScrollbar.min.css )
-
+Rails.application.config.assets.precompile = ['*.js', '*.css', '**/*.js', '**/*.css', '**/*.jpg', '*.png', '**/*.png']

@@ -4,12 +4,12 @@ div class='top-nav'
 			= link_to "TEKTIVE DESIGN", root_path, style: 'color: white;'
 			
 		li 
-		 	=link_to "Residential", residential_index_path
+		 	=link_to "Residential", 'palo_alto_farmhouse?type=residential'
 		li 
-			=link_to "Passive House", "#"
+			=link_to "Passive House", projects_passive_house_path
 		li 
-			=link_to "Studio", "#"
+			=link_to "Studio", "live_work?type=studio"
 		li 
-			=link_to "Workshop", "#"
+			=link_to "Workshop", "lampshade?type=workshop"
 		li 
-			=link_to "About", "#"
+			=link_to "About", projects_about_path
