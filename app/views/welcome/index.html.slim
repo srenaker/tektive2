@@ -1,3 +1,16 @@
+javascript:
+  $(document).ready(function(){
+	  $('.bxslider').bxSlider({
+		  auto: true,
+  		  autoControls: false,
+		  speed: 1500,
+		  pause: 5000,
+		  
+		  mode: 'fade',
+		  controls: false
+		  
+	  });
+  });
 
 
 
@@ -5,7 +18,25 @@ div class='section-header'
 	= render 'shared/top_nav'
 	
 	div class='logo'
-		p TEKTIVE DESIGN
-		
+		= image_tag 'misc/logo-reverse', style: "margin-top: 40px; margin-bottom: -40px; margin-right: 16px"
+
+		| TEKTIVE DESIGN
+
 div class='front-image-container'
-	= image_tag 'misc/1-rear.jpg', class: 'front-image'
+	ul class="bxslider"
+  		li 
+			= image_tag 'frontpage/1.jpg'
+		li 
+			= image_tag 'frontpage/2.jpg'
+		li 
+			= image_tag 'frontpage/3.jpg'
+		li 
+			= image_tag 'frontpage/4.jpg'
+		li 
+			= image_tag 'frontpage/5.jpg'
+		li 
+			= image_tag 'frontpage/6.jpg'
+		li 
+			= image_tag 'frontpage/7.jpg'
+		li 
+			= image_tag 'frontpage/8.jpg'
