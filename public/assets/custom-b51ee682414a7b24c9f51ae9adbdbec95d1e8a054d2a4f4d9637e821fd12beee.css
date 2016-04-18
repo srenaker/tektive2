@@ -34,7 +34,7 @@ li {
 }
 
 .thumbnails li {
-	margin-right: 7px;
+	margin-right: 5px;
 	display: inline;
 }
 
@@ -133,12 +133,4 @@ a:hover {
 	max-width: 255px;
 	float: left;
 	padding-right: 10px;
-}
-
-.footer {
-	font-size: 9pt;
-	color: #ccc;
-    float: left;
-    margin-left: 50%;
-	margin-bottom: 20px;
 }
