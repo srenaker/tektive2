@@ -16,6 +16,7 @@ gem 'bson_ext'
 gem 'slim'
 
 gem 'sprockets', '>= 3.7.2'
+gem 'rails_12factor'
 
 group :development, :test do
   gem 'byebug'
