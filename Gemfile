@@ -15,6 +15,8 @@ gem 'bson'
 gem 'bson_ext'
 gem 'slim'
 
+gem 'sprockets', '>= 3.7.2'
+
 group :development, :test do
   gem 'byebug'
   gem 'web-console', '~> 2.0'
