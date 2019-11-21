@@ -19,7 +19,7 @@ gem 'slim'
 
 gem 'sprockets', '>= 3.7.2'
 gem 'rails_12factor'
-ruby '2.4.4'
+ruby '2.6.5'
 
 group :development, :test do
   gem 'byebug'
