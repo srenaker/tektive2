@@ -15,24 +15,24 @@ div class='section-container'
 	
 			ul
 				- @project_list.each do |project|
-					- @project.title == project.title ? li_class = 'color: white;' : li_class = 'none'
+					- @project[:title] == project[:title] ? li_class = 'color: white;' : li_class = 'none'
 					li 
-						= link_to project.title, "/projects/#{project.id}?type=#{@type}", style: li_class 
+						= link_to project[:title], "/projects/#{project[:id]}?type=#{@type}", style: li_class 
 					
 
 	div class='image-container'
 		div 
-			= image_tag "#{@type}/#{@project.id}/#{@current_image}", class: 'main-image'
+			= image_tag "#{@type}/#{@project[:id]}/#{@current_image}", class: 'main-image'
 		div class='thumbnails'
 			ul
 				- @thumbnail_count.times do |i|
 					- thumb = "#{i+1}.jpg"
 					- thumb == @current_image ? thumb_image = "misc/thumb-selected" : thumb_image = 'misc/thumb'
 					li
-						= link_to image_tag(thumb_image), "/projects/#{@project.id}?image_number=#{i+1}&type=#{@type}"
+						= link_to image_tag(thumb_image), "/projects/#{@project[:id]}?image_number=#{i+1}&type=#{@type}"
 						
 				li 
 						=image_tag 'misc/DocumentIconX2', id: 'doc-image', title: "Project Description"
 						
 		div class='project-text'
-			= @project.description
+			= @project[:description]

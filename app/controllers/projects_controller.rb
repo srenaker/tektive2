@@ -192,16 +192,17 @@ workshop_array = [
     "type":"workshop"}
 ]
 
-    @project_list = residential_array if @type = "residential"
-    @project_list = studio_array if @type = "studio"
-    @project_list = workshop_array if @type = "workshop"
+    @project_list = residential_array if @type == "residential"
+    @project_list = studio_array if @type == "studio"
+    @project_list = workshop_array if @type == "workshop"
 
-    @project = @project_list['id']
-    
-    @thumbnail_count = Dir.glob("app/assets/images/#{@type}/#{@project.id}/*.jpg").length
+    for p in @project_list do  
+        @project = p if p[:id] == params[:id]
+    end
+
+    @thumbnail_count = Dir.glob("app/assets/images/#{@type}/#{@project[:id]}/*.jpg").length
     
     params['image_number'] ? @current_image = "#{params['image_number']}.jpg" : @current_image = "1.jpg" 
-
     
   end
   
